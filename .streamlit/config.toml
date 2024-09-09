@@ -1,0 +1,5 @@
+[client]
+toolbarMode="viewer"
+showSidebarNavigation = false
+[theme]
+base = "light"
