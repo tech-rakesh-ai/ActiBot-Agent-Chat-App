@@ -1,4 +1,4 @@
-#ActiBot-Powered Liferay Agent Chat App
+# ActiBot-Powered Liferay Agent Chat App
 
 This **ActiBot-Powered Liferay Agent Chat App** enables users to interact with an intelligent agent to perform various tasks like creating websites, managing users, and retrieving user lists. The app leverages a large language model and custom tools to handle user queries and execute predefined tool-based actions seamlessly across multiple platforms via API integration.
 
