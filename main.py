@@ -16,11 +16,19 @@ from display_sidebar import display_sidebar
 from display_conversation import display_chat_history
 from tools_functions import create_website_func, create_user_func, get_user_list_func
 from tools_schemas import CreateWebsiteSchema, CreateUserSchemas, GetUserListSchema
+from streamlit_extras.let_it_rain import rain
 from langchain.globals import set_verbose
 
 load_dotenv()
 
 st.set_page_config(page_title="ActiBot-Agent-Chat-App", page_icon=":robot_face:")
+
+rain(
+    emoji="🎈",
+    font_size=54,
+    falling_speed=5,
+    animation_length=5,
+)
 
 # Load the GROQ API KEY
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
