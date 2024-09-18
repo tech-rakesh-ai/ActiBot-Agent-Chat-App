@@ -20,6 +20,8 @@ from langchain.globals import set_verbose
 
 load_dotenv()
 
+st.set_page_config(page_title="ActiBot-Agent-Chat-App", page_icon=":robot_face:")
+
 # Load the GROQ API KEY
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 if not GROQ_API_KEY:
