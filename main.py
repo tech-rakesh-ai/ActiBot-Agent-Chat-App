@@ -1,4 +1,4 @@
-import getpass
+# import getpass
 import os
 import uuid
 import streamlit as st
@@ -31,9 +31,9 @@ rain(
 )
 
 # Load the GROQ API KEY
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-if not GROQ_API_KEY:
-    os.environ["GROQ_API_KEY"] = getpass.getpass("Enter your Groq API key: ")
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
+# if not GROQ_API_KEY:
+#     os.environ["GROQ_API_KEY"] = getpass.getpass("Enter your Groq API key: ")
 
 # Initialize the language model of Groq
 llm = ChatGroq(
