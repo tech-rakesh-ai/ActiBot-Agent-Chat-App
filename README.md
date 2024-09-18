@@ -35,13 +35,13 @@ Follow these steps to install and run the **ActiBot-Powered Liferay Agent Chat A
 
 ### Prerequisites
 - Python 3.8 or higher
-- API key for the required language model (configure in `.env` file)
+- API key for the required language model (stored in `.streamlit/secrets.toml` file)
 
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/tech-rakesh-ai/ConversationChatBot.git
-cd ConversationChatBot
+git clone https://github.com/tech-rakesh-ai/ActiBot-Agent-Chat-App.git
+cd ActiBot-Agent-Chat-App
 ```
 
 ### Step 2: Create and Activate a Virtual Environment (Optional)
@@ -67,15 +67,21 @@ langchain
 python-dotenv
 ```
 
-### Step 4: Configure API Keys
+### Step 4: Configure Secrets in `secrets.toml`
 
-Create a `.env` file in the root directory and add your API key:
+Instead of using a `.env` file, you will configure the necessary credentials in the `secrets.toml` file located in the `.streamlit` directory. Create the file `.streamlit/secrets.toml` and add the following:
 
-```bash
-API_KEY=your-api-key
+```toml
+# ActiBot API Key
+GROQ_API_KEY = "your-groq-api-key"
+
+# Liferay Credentials
+LIFERAY_BASE_URL = "https://your-liferay-instance.com"
+USERNAME = "your-username"
+PASSWORD = "your-password"
 ```
 
-Replace `your-api-key` with the actual API key for the language model.
+Replace `your-groq-api-key`, `https://your-liferay-instance.com`, `your-username`, and `your-password` with the appropriate values.
 
 ### Step 5: Run the Application
 
@@ -111,7 +117,8 @@ actibot-agent-chat-app/
 ├── tools_schemas.py             # Schemas for tool inputs
 ├── display_sidebar.py           # Sidebar layout functions
 ├── display_conversation.py      # Functions to display chat history
-└── .env                         # Environment variables (not included in repo)
+└── .streamlit/
+    └── secrets.toml             # Secrets for API keys and credentials
 ```
 
 ### Key Components
